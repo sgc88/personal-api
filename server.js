@@ -19,7 +19,7 @@ app.use(function(req, res, next) {
  * DATABASE *
  ************/
 
-// var db = require('./models');
+var db = require('./models');
 
 /**********
  * ROUTES *
@@ -37,6 +37,29 @@ app.get('/', function homepage(req, res) {
   res.sendFile(__dirname + '/views/index.html');
 });
 
+
+app.get('/api/profile', function apiIndex(req, res) {
+   res.json({
+     name: "Sherry",
+     githubLink : "https://github.com/sgc88",
+     githubProfileImage : "https://github.com/sgc88",
+     personalSiteLink : "https://www.linkedin.com/feed/",
+     currentCity: "san Francisco",
+     pets : [{
+
+             name: "Max",
+             type : "Dog",
+             breed : "Australian Shepherd",
+             },
+
+             {
+             name: "Sheila",
+             type : "Dog",
+             breed : "Chihuahua",
+             }
+           ]
+     });
+})
 
 /*
  * JSON API Endpoints
