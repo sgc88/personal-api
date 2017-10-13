@@ -2,17 +2,23 @@ console.log("Sanity Check: JS is working!");
 
 $(document).ready(function(){
 
+
+
+var
+
   $.ajax({
   method: 'GET', // index
-  data:''
   url: '/api/profile',
   success: handleResponse,
   error: handleError
 });
 
-function handleResponse(req, res){
+app.get('/api/profile', function index(req, res) {
+  /* This endpoint responds with all of the todos
+   */
+  res.json(console);
 
-}
+});
 
 function handleError(){
 
@@ -21,14 +27,13 @@ function handleError(){
 
 $.ajax({
 method: 'GET', // FOR INDEX :id
-data:''
 url: '/api/profile',
-success: handleResponse,
-error: handleError
+success: handleShowResponse,
+error: handleShowError
 });
 
 function handleResponse(req, res){
-
+  if()
 }
 
 function handleError(){
@@ -39,9 +44,9 @@ console.log("upss, error");
 $.ajax({
 method: 'POST',
 data: ''
-url: '/api/profile',
-success: handleResponse,
-error: handleError
+url: '/api/posting',
+success: handlePostingRespond,
+error: handlePostingError
 });
 
 function post(req, res){
@@ -50,7 +55,7 @@ function post(req, res){
 }
 
 // CODE GOES HERE
-// 
+//
 // $.ajax({
 // method: 'UPDATE',
 // url: '/api/update',
@@ -63,12 +68,9 @@ function post(req, res){
 
 $.ajax({
 method: 'DELETE',
-url: '/api/profile',
-success: handleResponse,
-error: handleError
+url: '/api/deleting',
+success: handleDeleteResponse,
+error: handleDeleteError
 });
-function delete(req, res){
 
-
-}
 });

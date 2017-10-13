@@ -15,6 +15,47 @@ app.use(function(req, res, next) {
   next();
 });
 
+app.get('/', function(req, res){
+
+  res.send('Hello World!')
+});
+
+
+
+var destination = [
+    {
+      _id : 1,
+      country :'Greece',
+      date :'june 2014',
+      duration :'10 days',
+      photo :'imageUrl'
+
+    },
+    {
+      _id : 2,
+      country :'Italy/ Roma',
+      date :'june 2015',
+      duration :'10 days',
+      photo :'imageUrl'
+    },
+    {
+      _id : 3,
+      country :'Bahamas/Exuma',
+      date :'September 2016',
+      duration :'8 days',
+      photo :'imageUrl'
+    },
+    {
+      _id : 4,
+      country :'France/Paris',
+      date :'September 2017',
+      duration :'8 days',
+      photo :'imageUrl'
+    },
+];
+
+app.get
+
 /************
  * DATABASE *
  ************/
