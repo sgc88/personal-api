@@ -53,7 +53,10 @@ var destination = [
       photo :'imageUrl'
     },
 ];
+function destination(){
 
+  console.log(destination);
+}
 app.get
 
 /************

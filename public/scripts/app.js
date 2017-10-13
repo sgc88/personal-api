@@ -71,6 +71,6 @@ method: 'DELETE',
 url: '/api/deleting',
 success: handleDeleteResponse,
 error: handleDeleteError
-});
+})
 
 });
